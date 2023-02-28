@@ -1,0 +1,140 @@
+#********** Range and Grid for volume and temperature of Carbon *********** 
+#    volume range:
+1.0      V_1 [A^3/atom] - left bound of volume [lowest allowed 1.0 A^3/atom]
+5.7      V_2 [A^3/atom] - right bound of volume [highest allowed 5.7 A^3/atom]
+<n_densities>      NV - number of grid points over the volume range
+#    value of volumes at phase interfaces:
+1.351    V_sh-sc - at sh-sc interface [A^3/atom]
+1.8444   V_sc-BC8 - at sc-BC8 interface [A^3/atom]
+2.85     V_BC8-d - at BC8-diamond interface [A^3/atom]
+#    melting temperature of solid phase under consideration:
+8000.0      T_melt [K] - melting temperature
+#    temperature range: 
+<min_temperature>      T_1 [K] - left bound of temperature 
+<max_temperature>      T_2 [K] - right bound of temperature 
+<n_temperatures>            NT - number of grid points over the temperature range 
+# 
+#********** Cold parameters for Vinet EOS ***********
+#
+#---- Diamond (FC8)
+-9.066      phi0 [eV/atom]
+432.4       B0   [GPa]
+5.7034      V0   [A^3/atom]
+3.793       B'   [unitless]
+#----- BC8 
+-8.705      phi0 [eV/atom]
+221.2       B0 	 [GPa]
+6.242       V0	 [A^3/atom]
+4.697       B'	 [unitless]
+#----- sc 
+-7.525      phi0 [eV/atom]
+59.09       B0 	 [GPa]
+7.9899      V0	 [A^3/atom]
+5.763       B'	 [unitless]
+#----- sh 
+-6.5        phi0 [eV/atom]
+22.12       B0 	 [GPa]
+9.6061      V0	 [A^3/atom]
+6.495       V'	 [unitless]
+#----- liquid phase
+<phi0>        phi0 [eV/atom]
+<B0>       B0 	 [GPa]
+<V0>       V0	 [A^3/atom]
+<Bprime>       V'	 [unitless]
+#- break point 1 parameters for liquid phase 
+<Vb1>         Vb1	 [A^3/atom]
+<a1>        a1	 [eV/atom]
+<b1>         b1	 [unitless]
+<n1>         n1	 [unitless]
+#- break point 2 parameters for liquid phase 
+<Vb2>         Vb2	 [A^3/atom]
+<a2>        a2	 [eV/atom]
+<b2>         b2	 [unitless]
+<n2>         n2	 [unitless]
+#- break point 3 parameters for liquid phase 
+<Vb3>         Vb3	 [A^3/atom]
+<a3>       a3	 [eV/atom]
+<b3>         b3	 [unitless]
+<n3>         n3	 [unitless]
+#- break point 4 parameters for liquid phase 
+<Vb4>        Vb4	 [A^3/atom]
+<a4>        a4	 [eV/atom]
+<b4>         b4	 [unitless]
+<n4>         n4	 [unitless]
+#
+#********** Quasi-harmonic ion-thermal parameters for EOS ***********
+#
+#---- Diamond (FC8) 
+5.571      Vp     [A^3/atom]
+1887.8     thetA  [K]
+-0.316     AA     [A^-3]
+0.913      BA     [unitless]
+1887.8     thetB  [K]
+0.168      AB     [A^-3]
+0.429      BB     [unitless]
+1887.8     thet1  [K]
+0.0846     A1     [A^-3]
+0.499      B1     [unitless]
+#----- BC8 
+3.176      Vp     [A^3/atom]
+1961.9     thetA  [K] 
+0.0        AA	  [A^-3]
+0.0        BA	  [unitless]
+3176.3     thetB  [K] 
+0.156      AB	  [A^-3]
+0.532      BB	  [unitless]
+2800.6     thet1  [K] 
+0.112      A1	  [A^-3]
+0.449      B1	  [unitless]
+#----- sc 
+2.658      Vp     [A^3/atom]
+2089.8     thetA  [K] 
+0.0        AA	  [A^-3]
+0.212      BA	  [unitless]
+2961.3     thetB  [K] 
+0.0        AB	  [A^-3]
+0.817      BB	  [unitless]
+2328.3     thet1  [K] 
+0.369      A1	  [A^-3]
+0.302      B1	  [unitless]
+#----- sh 
+1.35       Vp     [A^3/atom]
+4183.8     thetA  [K] 
+0.4354     AA	  [A^-3]
+0.4034     BA	  [unitless]
+4183.8     thetB  [K] 
+0.4354     AB	  [A^-3]
+0.4034     BB	  [unitless]
+4183.8     thet1  [K] 
+0.4354     A1	  [A^-3]
+0.4034     B1	  [unitless]
+#----- liquid phase 
+<Vp>      Vp     [A^3/atom]
+<thetA>      thetA  [K] 
+<AA>        AA	  [A^-3]
+<BA>       BA	  [unitless]
+<thetB>      thetB  [K] 
+<AB>        AB	  [A^-3]
+<BB>       BB	  [unitless]
+<thet1>      thet1  [K] 
+<A1>        A1	  [A^-3]
+<B1>       B1	  [unitless]
+#
+#********** Electron-thermal parameters for EOS ***********
+#
+#---- Diamond (FC8)
+5.785      Ve      [A^3/atom]
+3.79d-05   alpha0  [K^-1]
+0.0        kapa    [unitless]
+#----- BC8 
+5.077      Ve      [A^3/atom]
+5.5d-05    alpha0  [K^-1] 
+0.0        kapa	   [unitless]
+#----- sc 
+1.0        Ve      [A^3/atom]
+1.37d-05   alpha0  [K^-1] 
+0.637      kapa	   [unitless]
+#----- sh 
+1.0        Ve      [A^3/atom]
+1.58d-05   alpha0  [K^-1] 
+0.81       kapa	   [unitless]

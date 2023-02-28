@@ -1,0 +1,34 @@
+c HYADES Simulation INput File
+c Created Thursday, January 27 2022
+c Simulation of [Diamond] [Quartz]
+geometry 1 1
+mesh 1 401 0.000000 0.012500 1.000
+mesh 401 801 0.012500 0.022500 0.999
+region 1 400 1 3.51
+region 401 800 2 2.56
+material 1 6 12.011 1
+material 2 14 28.085 0.33
+material 2 8 15.999 0.67
+ioniz 1 3
+ioniz 2 3
+EOS 345 1
+EOS 23 2
+eosxtrp 1 2 2 2 2
+eosxtrp 2 2 2 2 2
+source pres 1 10
+sourcem 1.0
+tv 0.00e+00 0.00e+00
+tv 1.00e-10 <P>
+tv 1.00e-08 <P>
+tv 1.01e-08 0.00e+00
+pparray r u acc rho te ti tr pres zbar sd1
+parm nstop 5000000
+parm IRDTRN 0
+parm tstop 2.00e-08
+parm postdt 1.00e-10
+parm alvism 0.5
+parm aqvism 2.0
+parm flxlem .03
+parm temin 2.58e-05
+parm timin 2.58e-05
+parm qstimx 0.00001
